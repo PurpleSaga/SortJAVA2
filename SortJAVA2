@@ -1,0 +1,52 @@
+class SortArray
+{
+ public static void main(String args[])
+ {
+ int n=args.length;
+ int a[]=new int[n];
+ int i,j,b;
+ for(i=0;i<n;i++)
+  {
+  a[i]=Integer.parseInt(args [i]);
+  }
+  //sorting ascending
+ for(i=0;i<n;i++)
+  {
+  for(i=0;i<n;i++)
+   {
+   for(j=i+1;j<n;j++)
+    {
+    b=a[i];
+    a[i]=a[j];
+    a[j]=b;
+    }
+   }
+  }
+ //displaying ascending
+ System.out.println();
+ System.out.print("ascending array : ");
+ for(i=0;i<n;i++)
+  {
+   System.out.print(a[i]+""); 
+  }
+ //Sorting Descending
+ for(i=0;i<n;i++)
+ {
+ for(j=i+1;i<n;j++)
+  {
+  if(a[i]<a[j])
+  {
+  b=a[j];
+  a[i]=a[j];
+  a[j]=b;
+  }
+  }
+ }
+ //displaying descending
+ System.out.print("\ndescending array");
+ for(i=0;i<n;i++)
+  {
+  System.out.print(a[i]+"");
+  }
+ }
+}
